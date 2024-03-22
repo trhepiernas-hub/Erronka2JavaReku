@@ -1,53 +1,146 @@
-<mxfile host="app.diagrams.net" modified="2024-03-22T11:59:40.184Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="QtDT1oQFPg8ftdCjGl1H" version="24.0.7" type="github">
+<mxfile host="app.diagrams.net" modified="2024-03-22T12:59:19.292Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" etag="jmmWkJ9H3OKym26iF9Kp" version="24.0.7" type="github">
   <diagram name="Página-1" id="b0td1KGCIOVVUUMVwXor">
-    <mxGraphModel dx="1195" dy="628" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="819" dy="431" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#FFFFFF" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-1" value="Erronka2Errekuperazioa" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-1" value="Erronka2Errekuperazioa" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="80" width="160" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-2" value="ikuspegia" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-2" value="ikuspegia" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry y="190" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-3" value="kontrolatzaileak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-3" value="kontrolatzaileak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="240" y="190" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-4" value="modeloak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-4" value="modeloak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="520" y="190" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-5" value="zerbitzuak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-5" value="zerbitzuak" style="shape=folder;fontStyle=1;spacingTop=10;tabWidth=40;tabHeight=14;tabPosition=left;html=1;whiteSpace=wrap;" parent="1" vertex="1">
           <mxGeometry x="747" y="190" width="80" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-6" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&amp;nbsp;ErabiltzaileaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="490" y="260" width="160" height="100" as="geometry" />
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-6" value="&lt;div&gt;&amp;lt;&amp;lt;abstract&amp;gt;&amp;gt;&lt;/div&gt;&amp;nbsp;ErabiltzaileaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=40;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="490" y="260" width="160" height="174" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-7" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-6">
-          <mxGeometry y="40" width="160" height="26" as="geometry" />
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-7" value="- idErabiltzailea : Long&lt;div&gt;- erabiltzaileaIzena : String&lt;/div&gt;&lt;div&gt;- pertsonarenIzena : String&lt;/div&gt;&lt;div&gt;- abizena : String&lt;/div&gt;&lt;div&gt;- pasahitza : String&lt;/div&gt;&lt;div&gt;- korreoa : String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ao7O_Tj5wUaxiQU58cre-6" vertex="1">
+          <mxGeometry y="40" width="160" height="100" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-6">
-          <mxGeometry y="66" width="160" height="8" as="geometry" />
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="ao7O_Tj5wUaxiQU58cre-6" vertex="1">
+          <mxGeometry y="140" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-9" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-6">
-          <mxGeometry y="74" width="160" height="26" as="geometry" />
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-9" value="+ Seters and Geters" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ao7O_Tj5wUaxiQU58cre-6" vertex="1">
+          <mxGeometry y="148" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-10" value="JokalariaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="610" y="460" width="160" height="86" as="geometry" />
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-10" value="+ JokalariaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=20;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="600" y="550" width="170" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-11" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-10">
+        <mxCell id="LetN_RV759guSiDP1PKQ-1" value="&lt;div&gt;- jokalariak : List&amp;lt;this&amp;gt;&lt;/div&gt;- jokalariaKodea : String&lt;div&gt;- dorsalZenbakia : String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-10">
+          <mxGeometry y="20" width="170" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="ao7O_Tj5wUaxiQU58cre-10" vertex="1">
+          <mxGeometry y="70" width="170" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="ao7O_Tj5wUaxiQU58cre-13" value="+ Seters and Geters&lt;div&gt;+ getJokalariak() : List&amp;lt;this&amp;gt;&lt;/div&gt;&lt;div&gt;+ addJokalaria(this)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ao7O_Tj5wUaxiQU58cre-10" vertex="1">
+          <mxGeometry y="78" width="170" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-2" value="+ BazkideModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="550" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-3" value="&lt;div&gt;- bazkideak : List&amp;lt;this&amp;gt;&lt;/div&gt;-&amp;nbsp;kontuSortzeData : java.sql.Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-2">
+          <mxGeometry y="26" width="210" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="LetN_RV759guSiDP1PKQ-2">
+          <mxGeometry y="60" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-5" value="+ Seters and Geters&lt;div&gt;+ getBazkideak() : List&amp;lt;this&amp;gt;&lt;/div&gt;&lt;div&gt;+ addBazkidea(this)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-2">
+          <mxGeometry y="68" width="210" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-7" value="+ AdministratzaileaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="550" width="210" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-11" value="&lt;div&gt;- administratzaileak : List&amp;lt;&lt;span style=&quot;background-color: initial;&quot;&gt;this&amp;gt;&lt;/span&gt;&lt;/div&gt;-&amp;nbsp;administratzaileKodea : String&lt;div&gt;-&amp;nbsp;administratzaileKodea : String&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-7">
+          <mxGeometry y="26" width="210" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-9" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="LetN_RV759guSiDP1PKQ-7">
+          <mxGeometry y="80" width="210" height="2" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-10" value="+ Seters and Geters&lt;div&gt;+ getAdministratzaileak() :&amp;nbsp; List&amp;lt;this&amp;gt;&lt;/div&gt;&lt;div&gt;+ addAdministratzailea(this)&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-7">
+          <mxGeometry y="82" width="210" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-14" value="" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.822;entryY=0.995;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="ao7O_Tj5wUaxiQU58cre-10" target="ao7O_Tj5wUaxiQU58cre-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="460" y="470" as="sourcePoint" />
+            <mxPoint x="620" y="470" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="685" y="480" />
+              <mxPoint x="622" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-15" value="" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="LetN_RV759guSiDP1PKQ-2" target="ao7O_Tj5wUaxiQU58cre-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="520" y="550" as="sourcePoint" />
+            <mxPoint x="452" y="434" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="495" y="520" />
+              <mxPoint x="570" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-16" value="" style="endArrow=block;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.172;entryY=1.031;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="LetN_RV759guSiDP1PKQ-7" target="ao7O_Tj5wUaxiQU58cre-9">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="320" y="550" as="sourcePoint" />
+            <mxPoint x="365" y="434" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="285" y="480" />
+              <mxPoint x="520" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-21" value="+ BerriaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="180" y="710" width="200" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-22" value="&lt;div&gt;- berriak : List&amp;lt;this&amp;gt;&lt;/div&gt;- idBerria : Long&lt;div&gt;- izenburua : String&lt;/div&gt;&lt;div&gt;- irudia : String&lt;/div&gt;&lt;div&gt;- textua : String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-21">
+          <mxGeometry y="26" width="200" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-23" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="LetN_RV759guSiDP1PKQ-21">
+          <mxGeometry y="110" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-24" value="+ Seters and Geters&lt;div&gt;+ getBerriak() : List&amp;lt;this&amp;gt;&lt;/div&gt;&lt;div&gt;+ addBerria(this)&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-21">
+          <mxGeometry y="118" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-25" value="+ PartiduaModel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="710" width="200" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-26" value="&lt;div&gt;- partiduak : List&amp;lt;this&amp;gt;&lt;/div&gt;- idPartida : Long&lt;div&gt;- kokalekua: String&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- data : java.sql.Date&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;etxekoTaldeaPuntuazioa : int&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;-&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;kampokoTaldeaPuntuazioa : int&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- arbitroa : String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- auxiliarra : String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- irabazlea : String&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- aktaFintxategiaLink : String&lt;/span&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-25">
+          <mxGeometry y="26" width="200" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-27" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="LetN_RV759guSiDP1PKQ-25">
+          <mxGeometry y="160" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-28" value="+ Seters and Geters&lt;div&gt;+ getPartiduak() : List&amp;lt;this&amp;gt;&lt;/div&gt;&lt;div&gt;+ addPartidua(this)&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-25">
+          <mxGeometry y="168" width="200" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1.1;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="750" y="310" as="sourcePoint" />
+            <mxPoint x="750" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-31" value="+ ErabiltzaileZerbitzuak" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="707" y="260" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="LetN_RV759guSiDP1PKQ-32" value="+ field: type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-31">
           <mxGeometry y="26" width="160" height="26" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-10">
+        <mxCell id="LetN_RV759guSiDP1PKQ-33" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="LetN_RV759guSiDP1PKQ-31">
           <mxGeometry y="52" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-13" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ao7O_Tj5wUaxiQU58cre-10">
-          <mxGeometry y="60" width="160" height="26" as="geometry" />
+        <mxCell id="LetN_RV759guSiDP1PKQ-34" value="+ sortuJokalraria()&lt;div&gt;+ sortuAdministratzailea ()&lt;/div&gt;&lt;div&gt;+ sortuBazkidea()&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="LetN_RV759guSiDP1PKQ-31">
+          <mxGeometry y="60" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ao7O_Tj5wUaxiQU58cre-14" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="ao7O_Tj5wUaxiQU58cre-10">
-          <mxGeometry x="-1" y="3" relative="1" as="geometry">
-            <mxPoint x="480" y="360" as="sourcePoint" />
-            <mxPoint x="640" y="360" as="targetPoint" />
-          </mxGeometry>
+        <mxCell id="LetN_RV759guSiDP1PKQ-36" value="dos listas por modelo uno que venga al crear el modelo y otro de la peticion get a la rest API" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="647" y="700" width="213" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
