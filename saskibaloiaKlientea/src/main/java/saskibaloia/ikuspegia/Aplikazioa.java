@@ -11,17 +11,31 @@ import javax.swing.table.DefaultTableModel;
 public class Aplikazioa {
     private JTabbedPane tabbedPane1;
     private JPanel panel1;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
+    private JButton eKargatuFitxategiaButton;
+    private JButton eAktulizatuDatubasekoDatuakButton;
+    private JButton eGordeFitxategiraButton;
+    private JButton eExportatuSqlKodearaButton;
+    private JButton eIgoDatubaseraButton;
     private JTable jtJokalaraiak;
     private JTable jtDbJokalariak;
     private JTable jtAdministrtzaileak;
-    private JTable jtAdministratzailea;
+    private JTable jtDbAdministratzaileak;
     private JTable jtDbBazkideak;
     private JTable jtBazkideak;
+    private JTable jpDbBerriak;
+    private JTable table2jpBerriak;
+    private JButton bKargatuFitxategiaButton;
+    private JButton bAktulizatuDatubasekoDatuakButton;
+    private JButton bGordeFitxategiraButton;
+    private JButton bExportatuSqlKodearaButton;
+    private JButton bIgoDatubaseraButton;
+    private JButton pKargatuFitxategiaButton;
+    private JButton pAktulizatuDatubasekoDatuakButton;
+    private JButton pGordeFitxategiraButton;
+    private JButton pExportatuSqlKodearaButton;
+    private JButton pIgoDatubaseraButton;
+    private JTable jtDbPartiduak;
+    private JTable jtPartiduak;
 
     public Aplikazioa() {
         JFrame frame = new JFrame("aplikazioa");
@@ -39,7 +53,7 @@ public class Aplikazioa {
        jtJokalaraiak.setModel(createTable(new JokalariaModeloa(), 1));
        jtDbJokalariak.setModel(createTable(new JokalariaModeloa(), 0));
        jtAdministrtzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 1));
-       jtAdministratzailea.setModel(createTable(new AdmnistratzaileaModeloa(), 0));
+       jtDbAdministratzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 0));
        jtDbBazkideak.setModel(createTable(new BazkideaModeloa(), 1));
        jtBazkideak.setModel(createTable(new BazkideaModeloa(), 0));
     }
@@ -51,7 +65,5 @@ public class Aplikazioa {
      */
     private DefaultTableModel createTable( Object mota, int tipo) {
         return  TablaModelCreator.createTableModel(mota, tipo);
-
-
     }
 }
