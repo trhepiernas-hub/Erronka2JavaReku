@@ -5,8 +5,8 @@ package saskibaloia.modeloak;
 
 public class JokalariaModeloa extends ErabiltzaileaModeloa {
 
-	public String jokalariKodea;
-	public String dorsalZenbakia;
+	private String jokalariKodea;
+	private String dorsalZenbakia;
 
 	public ErabiltzaileaModeloa getErabiltzailea() {
 		return new ErabiltzaileaModeloa(this.getIdErabiltzailea(), this.getErabiltzaileaIzena(),
