@@ -28,17 +28,21 @@ public class ErabiltzaileZerbitzuak {
         if (userSelection == JFileChooser.APPROVE_OPTION) {
             String fitxategia = fileChooser.getSelectedFile().getAbsolutePath();
             System.out.println("Gordetzen: " + fitxategia);
+
         }
     }
 
     private void fitxategiaSortu() {
     //TODO: tabletatik datuak bildu eta Json artxiboetara pasatu
+        List<JokalariaModeloa> jokalariak = lortuJokalariTablakoDatuak();
+        List<BazkideaModeloa> bazkideak = lortuBazkideTablakoDatuak();
+        List<AdmnistratzaileaModeloa> administratzaileak = lortuAdministrtzaileTablakoDatuak();
 
 
     }
 
     /**
-     *  Funtzi honek Bazkidearen tablatik datuak lortu eta bazkidea model moduan bueltatzen ditu
+     * Funtzio honek Bazkidearen tablatik datuak lortu eta bazkidea model moduan bueltatzen ditu
      * @return Lista bat BazkideaModeloa objetuekin
      */
    public List<BazkideaModeloa> lortuBazkideTablakoDatuak() {
