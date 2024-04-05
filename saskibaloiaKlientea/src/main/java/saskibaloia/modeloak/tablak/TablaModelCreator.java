@@ -49,7 +49,6 @@ public class TablaModelCreator{
                 }
             };
         }
-
         a.addRow(new Object[fields.size()]);
         return a;
 

@@ -1,10 +1,8 @@
 package saskibaloia.ikuspegia;
 
-import saskibaloia.kontrolatzaileak.BerriaKontrolatzailea;
 import saskibaloia.kontrolatzaileak.ErabiltzaileKontrolatzailea;
 import saskibaloia.modeloak.AdmnistratzaileaModeloa;
 import saskibaloia.modeloak.BazkideaModeloa;
-import saskibaloia.modeloak.BerriaModeloa;
 import saskibaloia.modeloak.JokalariaModeloa;
 import saskibaloia.modeloak.tablak.TablaModelCreator;
 
@@ -14,7 +12,6 @@ import javax.swing.table.DefaultTableModel;
 public class Aplikazioa {
 
     private static Aplikazioa aplikazioa;
-    private JTabbedPane tabbedPane1;
     private JPanel panel1;
     private JButton eKargatuFitxategiaButton;
     private JButton eAktulizatuDatubasekoDatuakButton;
@@ -27,13 +24,6 @@ public class Aplikazioa {
     private JTable jtDbAdministratzaileak;
     private JTable jtDbBazkideak;
     private JTable jtBazkideak;
-    private JTable jtDbBerriak;
-    private JTable jtBerriak;
-    private JButton bKargatuFitxategiaButton;
-    private JButton bAktulizatuDatubasekoDatuakButton;
-    private JButton bGordeFitxategiraButton;
-    private JButton bExportatuSqlKodearaButton;
-    private JButton bIgoDatubaseraButton;
 
     private Aplikazioa() {
         JFrame frame = new JFrame("aplikazioa");
@@ -65,10 +55,9 @@ public class Aplikazioa {
        jtDbJokalariak.setModel(createTable(new JokalariaModeloa(), 0));
        jtAdministrtzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 1));
        jtDbAdministratzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 0));
-       jtDbBazkideak.setModel(createTable(new BazkideaModeloa(), 1));
-       jtBazkideak.setModel(createTable(new BazkideaModeloa(), 0));
-       jtBerriak.setModel(createTable(new BerriaModeloa(), 1));
-       jtDbBerriak.setModel(createTable(new BerriaModeloa(), 0));
+       jtDbBazkideak.setModel(createTable(new BazkideaModeloa(), 0));
+       jtBazkideak.setModel(createTable(new BazkideaModeloa(), 1));
+
     }
 
     private void sortuActionListenerrak() {
@@ -77,12 +66,6 @@ public class Aplikazioa {
         eGordeFitxategiraButton.addActionListener(new ErabiltzaileKontrolatzailea());
         eExportatuSqlKodearaButton.addActionListener(new ErabiltzaileKontrolatzailea());
         eIgoDatubaseraButton.addActionListener(new ErabiltzaileKontrolatzailea());
-
-        bKargatuFitxategiaButton.addActionListener(new BerriaKontrolatzailea());
-        bAktulizatuDatubasekoDatuakButton.addActionListener(new BerriaKontrolatzailea());
-        bGordeFitxategiraButton.addActionListener(new BerriaKontrolatzailea());
-        bExportatuSqlKodearaButton.addActionListener(new BerriaKontrolatzailea());
-        bIgoDatubaseraButton.addActionListener(new BerriaKontrolatzailea());
 
     }
 
@@ -135,9 +118,5 @@ public class Aplikazioa {
         DefaultTableModel b = (DefaultTableModel) getJtJokalaraiak().getModel();
         b.addRow(new Object[]{jokalaria.getJokalariKodea(), jokalaria.getDorsalZenbakia(), jokalaria.getIdErabiltzailea(), jokalaria.getErabiltzaileaIzena(), jokalaria.getPertsonarenIzena(), jokalaria.getAbizena(), jokalaria.getPasahitza(), jokalaria.getKorreoa()});
         getJtJokalaraiak().setModel(b);
-    }
-
-    public JTable getJtBerriak() {
-        return jtBerriak;
     }
 }

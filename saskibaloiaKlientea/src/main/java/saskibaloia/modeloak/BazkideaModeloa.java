@@ -1,13 +1,14 @@
 package saskibaloia.modeloak;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class BazkideaModeloa extends ErabiltzaileaModeloa {
 
 	/** Bazkideak kontua sortu duen data */
-	private Date kontuSortzeData;
+	private String kontuSortzeData;
 
-	public BazkideaModeloa(Date kontuSortzeData, ErabiltzaileaModeloa erabiltzailea) {
+	public BazkideaModeloa(String kontuSortzeData, ErabiltzaileaModeloa erabiltzailea) {
 		super(erabiltzailea);
 		this.kontuSortzeData = kontuSortzeData;
 
@@ -18,11 +19,12 @@ public class BazkideaModeloa extends ErabiltzaileaModeloa {
 				this.getPertsonarenIzena(), this.getAbizena(), this.getPasahitza(), this.getKorreoa());
 	}
 
-	public Date getkontuSortzeData() {
-		return kontuSortzeData;
+
+	public String getkontuSortzeData() {
+        return kontuSortzeData;
 	}
 
-	public void setkontuSortzeData(Date kontuSortzeData) {
+	public void setkontuSortzeData(String kontuSortzeData) {
 		this.kontuSortzeData = kontuSortzeData;
 	}
 

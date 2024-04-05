@@ -26,13 +26,13 @@ class ErabiltzaileZerbitzuakTest {
         bazkidea.setAbizena("abizena");
         bazkidea.setPasahitza("pasahitza");
         bazkidea.setKorreoa("korreoa");
-        bazkidea.setkontuSortzeData(new java.util.Date());
+        bazkidea.setkontuSortzeData("2020-02-12");
         aplikazioa.addDataJtBazkideak(bazkidea);
         ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
         List<BazkideaModeloa> a = erabiltzaileZerbitzuak.lortuBazkideTablakoDatuak();
         BazkideaModeloa bazkidea2 = (BazkideaModeloa) a.getLast();
         boolean result = true;
-        result = result && bazkidea.getIdErabiltzailea().equals(bazkidea2.getIdErabiltzailea());
+        result = result && bazkidea2.getIdErabiltzailea() == null;
         result = result && bazkidea.getErabiltzaileaIzena().equals(bazkidea2.getErabiltzaileaIzena());
         result = result && bazkidea.getPertsonarenIzena().equals(bazkidea2.getPertsonarenIzena());
         result = result && bazkidea.getAbizena().equals(bazkidea2.getAbizena());
@@ -60,7 +60,7 @@ class ErabiltzaileZerbitzuakTest {
         List<JokalariaModeloa> a = erabiltzaileZerbitzuak.lortuJokalariTablakoDatuak();
         JokalariaModeloa jokalaria2 = (JokalariaModeloa) a.getLast();
         boolean result = true;
-        result = result && jokalaria.getIdErabiltzailea().equals(jokalaria2.getIdErabiltzailea());
+        result = result && jokalaria2.getIdErabiltzailea() == null;
         result = result && jokalaria.getErabiltzaileaIzena().equals(jokalaria2.getErabiltzaileaIzena());
         result = result && jokalaria.getPertsonarenIzena().equals(jokalaria2.getPertsonarenIzena());
         result = result && jokalaria.getAbizena().equals(jokalaria2.getAbizena());
@@ -87,7 +87,7 @@ class ErabiltzaileZerbitzuakTest {
         List<AdmnistratzaileaModeloa> a = erabiltzaileZerbitzuak.lortuAdministrtzaileTablakoDatuak();
         AdmnistratzaileaModeloa administratzailea2 = (AdmnistratzaileaModeloa) a.getLast();
         boolean result = true;
-        result = result && administratzailea.getIdErabiltzailea().equals(administratzailea2.getIdErabiltzailea());
+        result = result && administratzailea2.getIdErabiltzailea() == null;
         result = result && administratzailea.getErabiltzaileaIzena().equals(administratzailea2.getErabiltzaileaIzena());
         result = result && administratzailea.getPertsonarenIzena().equals(administratzailea2.getPertsonarenIzena());
         result = result && administratzailea.getAbizena().equals(administratzailea2.getAbizena());
