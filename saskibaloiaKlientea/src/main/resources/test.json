@@ -1,0 +1,33 @@
+{
+  "jokalariak": [
+    {
+      "jokalariKodea": "01",
+      "dorsalZenbakia": "01",
+      "erabiltzaileaIzena": "01",
+      "pertsonarenIzena": "01",
+      "abizena": "01",
+      "pasahitza": "01",
+      "korreoa": "01"
+    }
+  ],
+  "bazkideak": [
+    {
+      "kontuSortzeData": "01",
+      "erabiltzaileaIzena": "01",
+      "pertsonarenIzena": "01",
+      "abizena": "01",
+      "pasahitza": "01",
+      "korreoa": "01"
+    }
+  ],
+  "administratzaileak": [
+    {
+      "administratzaileKodea": "01",
+      "erabiltzaileaIzena": "01",
+      "pertsonarenIzena": "01",
+      "abizena": "01",
+      "pasahitza": "01",
+      "korreoa": "01"
+    }
+  ]
+}
