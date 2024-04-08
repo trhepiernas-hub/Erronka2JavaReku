@@ -228,6 +228,7 @@ public class ErabiltzaileZerbitzuak {
         if (fitxategia == null) {
             return;
         }
+        fitxategia += ".sql";
         List<JokalariaModeloa> jokalariak = lortuJokalariTablakoDatuak();
         List<BazkideaModeloa> bazkideak = lortuBazkideTablakoDatuak();
         List<AdmnistratzaileaModeloa> administratzaileak = lortuAdministrtzaileTablakoDatuak();
@@ -239,21 +240,21 @@ public class ErabiltzaileZerbitzuak {
             sql.append("INSERT INTO `jokalaria` (`dorsal_zenbakia`, `jokalari_kodea`, `id_erabiltzailea`) VALUES (");
             sql.append(jokalaria.getDorsalZenbakia()).append(", ");
             sql.append(jokalaria.getJokalariKodea()).append(", ");
-            sql.append(jokalaria.getIdErabiltzailea()).append(");\n");
+            sql.append("LAST_INSERT_ID()").append(");\n");
         }
 
         for (BazkideaModeloa bazkidea : bazkideak) {
             sql.append(insertErabiltzailea(bazkidea));
             sql.append("INSERT INTO `bazkidea` (`kontu_sortze_data`, `id_erabiltzailea`) VALUES (");
             sql.append(bazkidea.getkontuSortzeData()).append(", ");
-            sql.append(bazkidea.getIdErabiltzailea()).append(");\n");
+            sql.append("LAST_INSERT_ID()").append(");\n");
         }
 
         for (AdmnistratzaileaModeloa administratzailea : administratzaileak) {
             sql.append(insertErabiltzailea(administratzailea));
             sql.append("INSERT INTO `administratzailea` (`administratzaile_kodea`, `id_erabiltzailea`) VALUES (");
             sql.append(administratzailea.getAdministratzaileKodea()).append(", ");
-            sql.append(administratzailea.getIdErabiltzailea()).append(");\n");
+            sql.append("LAST_INSERT_ID()").append(");\n");
         }
 
         final String sqlKodea = sql.toString();
