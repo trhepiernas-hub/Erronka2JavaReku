@@ -56,6 +56,10 @@ public class ErabiltzaileZerbitzuak {
         }
     }
 
+    /**
+     * Funtzio honek tablako datuekin json bat sortu eta bidaltzen du
+     * @return tablako datuekin json bat
+     */
     public String sortuJson() {
         Gson gson = new Gson();
         List<JokalariaModeloa> jokalariak = lortuJokalariTablakoDatuak();
@@ -177,7 +181,10 @@ public class ErabiltzaileZerbitzuak {
         }
         return administratzaileak;
     }
-    
+
+    /**
+     * Meodo honek gure ekipotik json fitxategi bat kargatzen tabletan gero guk bertatik editatzeko
+     */
     public void kargatuFitxategia() {
         Aplikazioa aplikazioa = Aplikazioa.getInstace();
         String fitxategia = eskatuFitxategia("Aukeratu fitxategia");
@@ -222,6 +229,9 @@ public class ErabiltzaileZerbitzuak {
         }
     }
 
+    /**
+     * Metodo honek gure tabletako datuak insert into sql kodera bihurtzen ditu eta fitxategi batean gorde
+     */
     public void exportatuSqlKodeara() {
 
         String fitxategia = eskatuFitxategia("Nun gorde nahi duzu fitxategia?");
@@ -285,11 +295,5 @@ public class ErabiltzaileZerbitzuak {
         sql.append(erabiltzaileaModeloa.getPasahitza()).append(", ");
         sql.append(erabiltzaileaModeloa.getPertsonarenIzena()).append(");\n");
         return sql.toString();
-    }
-
-    public void igoDatubasera() {
-    }
-
-    public void aktualizatuDatubasekoDatuak() {
     }
 }

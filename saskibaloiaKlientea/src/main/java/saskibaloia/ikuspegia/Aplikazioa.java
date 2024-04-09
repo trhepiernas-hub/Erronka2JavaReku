@@ -14,15 +14,10 @@ public class Aplikazioa {
     private static Aplikazioa aplikazioa;
     private JPanel panel1;
     private JButton eKargatuFitxategiaButton;
-    private JButton eAktulizatuDatubasekoDatuakButton;
     private JButton eGordeFitxategiraButton;
     private JButton eExportatuSqlKodearaButton;
-    private JButton eIgoDatubaseraButton;
     private JTable jtJokalaraiak;
-    private JTable jtDbJokalariak;
     private JTable jtAdministrtzaileak;
-    private JTable jtDbAdministratzaileak;
-    private JTable jtDbBazkideak;
     private JTable jtBazkideak;
 
     private Aplikazioa() {
@@ -40,6 +35,10 @@ public class Aplikazioa {
         sortuActionListenerrak();
     }
 
+    /**
+     * Aplikazioaren istantzia bat sortuta dagoen komprobatzen du eta ez badago sortu beste hau itzuli
+     * @return Aplikazioaren instazia bat
+     */
     public static Aplikazioa getInstace() {
         if (aplikazioa == null) {
             aplikazioa = new Aplikazioa();
@@ -51,31 +50,28 @@ public class Aplikazioa {
      * Metodo honek interfazeko tabla guztiak sortzen ditu
      */
     private void createTables() {
-       jtJokalaraiak.setModel(createTable(new JokalariaModeloa(), 1));
-       jtDbJokalariak.setModel(createTable(new JokalariaModeloa(), 0));
-       jtAdministrtzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 1));
-       jtDbAdministratzaileak.setModel(createTable(new AdmnistratzaileaModeloa(), 0));
-       jtDbBazkideak.setModel(createTable(new BazkideaModeloa(), 0));
-       jtBazkideak.setModel(createTable(new BazkideaModeloa(), 1));
+       jtJokalaraiak.setModel(createTable(new JokalariaModeloa()));
+       jtAdministrtzaileak.setModel(createTable(new AdmnistratzaileaModeloa()));
+       jtBazkideak.setModel(createTable(new BazkideaModeloa()));
 
     }
 
+    /**
+     * MEtodo honek botoi guztiei actionListener bat gehitzen die
+     */
     private void sortuActionListenerrak() {
         eKargatuFitxategiaButton.addActionListener(new ErabiltzaileKontrolatzailea());
-        eAktulizatuDatubasekoDatuakButton.addActionListener(new ErabiltzaileKontrolatzailea());
         eGordeFitxategiraButton.addActionListener(new ErabiltzaileKontrolatzailea());
         eExportatuSqlKodearaButton.addActionListener(new ErabiltzaileKontrolatzailea());
-        eIgoDatubaseraButton.addActionListener(new ErabiltzaileKontrolatzailea());
 
     }
 
     /**
      * Funtzio honek DefaultTableModel bat sortuko du, guk pasatako parametroen arabera
      * @param mota Tablaren Objetu mota
-     * @param tipo taularen mota, 0 tabla ezingo da editatu edo 1 baldin bada enventlistner bat ekarriko dut azkenko filan idaztean beste row bat sortuko du
      */
-    private DefaultTableModel createTable( Object mota, int tipo) {
-        return  TablaModelCreator.createTableModel(mota, tipo);
+    private DefaultTableModel createTable( Object mota) {
+        return  TablaModelCreator.createTableModel(mota);
     }
 
     public JTable getJtJokalaraiak() {

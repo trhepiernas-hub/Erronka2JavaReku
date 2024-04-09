@@ -17,10 +17,15 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ErabiltzaileZerbitzuakTest {
 
-    @Test
-    void lortuBazkideTablakoDatuak() {
-        Aplikazioa aplikazioa = Aplikazioa.getInstace();
-        BazkideaModeloa bazkidea = new BazkideaModeloa();
+    private JokalariaModeloa jokalaria;
+    private BazkideaModeloa bazkidea;
+    private AdmnistratzaileaModeloa administratzailea;
+
+    private Aplikazioa aplikazioa = Aplikazioa.getInstace();
+    @BeforeEach
+    void setUp () {
+
+        bazkidea = new BazkideaModeloa();
         bazkidea.setIdErabiltzailea(1L);
         bazkidea.setErabiltzaileaIzena("erabiltzaileaIzena");
         bazkidea.setPertsonarenIzena("pertsonarenIzena");
@@ -28,7 +33,33 @@ class ErabiltzaileZerbitzuakTest {
         bazkidea.setPasahitza("pasahitza");
         bazkidea.setKorreoa("korreoa");
         bazkidea.setkontuSortzeData("2020-02-12");
+
+        jokalaria = new JokalariaModeloa();
+        jokalaria.setIdErabiltzailea(1L);
+        jokalaria.setErabiltzaileaIzena("erabiltzaileaIzena");
+        jokalaria.setPertsonarenIzena("pertsonarenIzena");
+        jokalaria.setAbizena("abizena");
+        jokalaria.setPasahitza("pasahitza");
+        jokalaria.setKorreoa("korreoa");
+        jokalaria.setDorsalZenbakia("12");
+        jokalaria.setJokalariKodea("01");
+
+        administratzailea = new AdmnistratzaileaModeloa();
+        administratzailea.setIdErabiltzailea(1L);
+        administratzailea.setErabiltzaileaIzena("erabiltzaileaIzena");
+        administratzailea.setPertsonarenIzena("pertsonarenIzena");
+        administratzailea.setAbizena("abizena");
+        administratzailea.setPasahitza("pasahitza");
+        administratzailea.setKorreoa("korreoa");
+        administratzailea.setAdministratzaileKodea("01");
+
         aplikazioa.addDataJtBazkideak(bazkidea);
+        aplikazioa.addDataJtJokalariak(jokalaria);
+        aplikazioa.addDataJtAdministrtzaileak(administratzailea);
+    }
+    @Test
+    void lortuBazkideTablakoDatuak() {
+
         ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
         List<BazkideaModeloa> a = erabiltzaileZerbitzuak.lortuBazkideTablakoDatuak();
         BazkideaModeloa bazkidea2 = (BazkideaModeloa) a.getLast();
@@ -46,17 +77,7 @@ class ErabiltzaileZerbitzuakTest {
 
     @Test
     void lortuJokalariTablakoDatuak() {
-        Aplikazioa aplikazioa = Aplikazioa.getInstace();
-        JokalariaModeloa jokalaria = new JokalariaModeloa();
-        jokalaria.setIdErabiltzailea(1L);
-        jokalaria.setErabiltzaileaIzena("erabiltzaileaIzena");
-        jokalaria.setPertsonarenIzena("pertsonarenIzena");
-        jokalaria.setAbizena("abizena");
-        jokalaria.setPasahitza("pasahitza");
-        jokalaria.setKorreoa("korreoa");
-        jokalaria.setDorsalZenbakia("12");
-        jokalaria.setJokalariKodea("01");
-        aplikazioa.addDataJtJokalariak(jokalaria);
+
         ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
         List<JokalariaModeloa> a = erabiltzaileZerbitzuak.lortuJokalariTablakoDatuak();
         JokalariaModeloa jokalaria2 = (JokalariaModeloa) a.getLast();
@@ -74,16 +95,7 @@ class ErabiltzaileZerbitzuakTest {
 
     @Test
     void lortuAdministrtzaileTablakoDatuak() {
-        Aplikazioa aplikazioa = Aplikazioa.getInstace();
-        AdmnistratzaileaModeloa administratzailea = new AdmnistratzaileaModeloa();
-        administratzailea.setIdErabiltzailea(1L);
-        administratzailea.setErabiltzaileaIzena("erabiltzaileaIzena");
-        administratzailea.setPertsonarenIzena("pertsonarenIzena");
-        administratzailea.setAbizena("abizena");
-        administratzailea.setPasahitza("pasahitza");
-        administratzailea.setKorreoa("korreoa");
-        administratzailea.setAdministratzaileKodea("01");
-        aplikazioa.addDataJtAdministrtzaileak(administratzailea);
+
         ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
         List<AdmnistratzaileaModeloa> a = erabiltzaileZerbitzuak.lortuAdministrtzaileTablakoDatuak();
         AdmnistratzaileaModeloa administratzailea2 = (AdmnistratzaileaModeloa) a.getLast();
@@ -96,6 +108,19 @@ class ErabiltzaileZerbitzuakTest {
         result = result && administratzailea.getKorreoa().equals(administratzailea2.getKorreoa());
         result = result && administratzailea.getAdministratzaileKodea().equals(administratzailea2.getAdministratzaileKodea());
         assertTrue(result);
+
+    }
+
+    @Test
+    void sortuJson() {
+        ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
+        System.out.println(erabiltzaileZerbitzuak.sortuJson());
+        String a = "{\n" +
+                "  \"jokalariak\": [{},{\"jokalariKodea\":\"01\",\"dorsalZenbakia\":\"12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"jokalariKodea\":\"01\",\"dorsalZenbakia\":\"12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
+                "  \"bazkideak\": [{},{\"kontuSortzeData\":\"2020-02-12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"kontuSortzeData\":\"2020-02-12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
+                "  \"administratzaileak\": [{},{\"administratzaileKodea\":\"01\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"administratzaileKodea\":\"01\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}]\n" +
+                "}";
+        assertEquals(a, erabiltzaileZerbitzuak.sortuJson());
 
     }
 }

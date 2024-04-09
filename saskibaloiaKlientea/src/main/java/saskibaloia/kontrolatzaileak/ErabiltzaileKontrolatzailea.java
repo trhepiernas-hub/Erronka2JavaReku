@@ -23,12 +23,6 @@ public class ErabiltzaileKontrolatzailea implements ActionListener {
             case "Exportatu Sql kodeara" :
                 erabiltzaileZerbitzuak.exportatuSqlKodeara();
                 break;
-            case "Igo Datubasera" :
-                erabiltzaileZerbitzuak.igoDatubasera();
-                break;
-            case "Aktualizatu Datubaseko datuak" :
-                erabiltzaileZerbitzuak.aktualizatuDatubasekoDatuak();
-                break;
         };
     }
 }

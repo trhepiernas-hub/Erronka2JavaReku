@@ -1,33 +1,29 @@
+
 {
-  "jokalariak": [
+  "jokalariak": [{},
     {
-      "jokalariKodea": "01",
-      "dorsalZenbakia": "01",
-      "erabiltzaileaIzena": "01",
-      "pertsonarenIzena": "01",
-      "abizena": "01",
-      "pasahitza": "01",
-      "korreoa": "01"
-    }
-  ],
-  "bazkideak": [
+      "jokalariKodea":"01",
+      "dorsalZenbakia":"12",
+      "erabiltzaileaIzena":"erabiltzaileaIzena",
+      "pertsonarenIzena":"pertsonarenIzena",
+      "abizena":"abizena","pasahitza":"pasahitza",
+      "korreoa":"korreoa"
+    }],
+  "bazkideak": [{},{
+    "kontuSortzeData":"2020-02-12",
+    "erabiltzaileaIzena":"erabiltzaileaIzena",
+    "pertsonarenIzena":"pertsonarenIzena",
+    "abizena":"abizena",
+    "pasahitza":"pasahitza",
+    "korreoa":"korreoa"
+  }],
+  "administratzaileak": [{},
     {
-      "kontuSortzeData": "01",
-      "erabiltzaileaIzena": "01",
-      "pertsonarenIzena": "01",
-      "abizena": "01",
-      "pasahitza": "01",
-      "korreoa": "01"
-    }
-  ],
-  "administratzaileak": [
-    {
-      "administratzaileKodea": "01",
-      "erabiltzaileaIzena": "01",
-      "pertsonarenIzena": "01",
-      "abizena": "01",
-      "pasahitza": "01",
-      "korreoa": "01"
-    }
-  ]
+      "administratzaileKodea":"01",
+      "erabiltzaileaIzena":"erabiltzaileaIzena",
+      "pertsonarenIzena":"pertsonarenIzena",
+      "abizena":"abizena",
+      "pasahitza":"pasahitza",
+      "korreoa":"korreoa"
+    }]
 }
