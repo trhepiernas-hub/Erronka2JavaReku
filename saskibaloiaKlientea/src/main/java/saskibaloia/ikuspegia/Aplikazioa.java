@@ -115,4 +115,31 @@ public class Aplikazioa {
         b.addRow(new Object[]{jokalaria.getJokalariKodea(), jokalaria.getDorsalZenbakia(), jokalaria.getIdErabiltzailea(), jokalaria.getErabiltzaileaIzena(), jokalaria.getPertsonarenIzena(), jokalaria.getAbizena(), jokalaria.getPasahitza(), jokalaria.getKorreoa()});
         getJtJokalaraiak().setModel(b);
     }
+
+    /**
+     * Metodo honek Jokalarien taula garbitzen du
+     */
+    public void clearJokalariakTable() {
+        DefaultTableModel b = (DefaultTableModel) getJtJokalaraiak().getModel();
+        b.setRowCount(0);
+        getJtJokalaraiak().setModel(b);
+    }
+
+    /**
+     * Metodo honek Administrtzaileen taula garbitzen du
+     */
+    public void clearAdministrtzaileakTable() {
+        DefaultTableModel b = (DefaultTableModel) getJtAdministrtzaileak().getModel();
+        b.setRowCount(0);
+        getJtAdministrtzaileak().setModel(b);
+    }
+
+    /**
+     * Metodo honek Bazkideen taula garbitzen du
+     */
+    public void clearBazkideakTable() {
+        DefaultTableModel b = (DefaultTableModel) getJtBazkideak().getModel();
+        b.setRowCount(0);
+        getJtBazkideak().setModel(b);
+    }
 }

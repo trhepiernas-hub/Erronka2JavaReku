@@ -90,6 +90,13 @@ public class ErabiltzaileZerbitzuak {
 
        for (int i = 0; i < filas; i++) {
 
+           BazkideaModeloa bazkidea = new BazkideaModeloa();
+
+           if (modelo.getValueAt(i, 1) != null) {
+               Long id = (Long) modelo.getValueAt(i, 1);
+               bazkidea.setIdErabiltzailea(id);
+           }
+
            String erabiltzaileaIzena = (String) modelo.getValueAt(i, 2);
            String pertsonarenIzena = (String) modelo.getValueAt(i, 3);
            String abizena = (String) modelo.getValueAt(i, 4);
@@ -98,7 +105,6 @@ public class ErabiltzaileZerbitzuak {
            String kontuSortzeData = (String) modelo.getValueAt(i, 0);
 
            // Crea una instancia de BazkideaModeloa con los valores de la fila actual
-           BazkideaModeloa bazkidea = new BazkideaModeloa();
            bazkidea.setErabiltzaileaIzena(erabiltzaileaIzena);
            bazkidea.setPertsonarenIzena(pertsonarenIzena);
            bazkidea.setAbizena(abizena);
@@ -123,7 +129,16 @@ public class ErabiltzaileZerbitzuak {
         List<JokalariaModeloa> jokalariak = new ArrayList<>();
 
         for (int i = 0; i < modelo.getRowCount(); i++) {
+
+            JokalariaModeloa jokalaria = new JokalariaModeloa();
+
             // Objetuarentzako datuak lortu tablatik
+
+            if (modelo.getValueAt(i, 2) != null) {
+                Long id = (Long) modelo.getValueAt(i, 2);
+                jokalaria.setIdErabiltzailea(id);
+            }
+
             String erabiltzaileaIzena = (String) modelo.getValueAt(i, 3);
             String pertsonarenIzena = (String) modelo.getValueAt(i, 4);
             String abizena = (String) modelo.getValueAt(i, 5);
@@ -133,7 +148,7 @@ public class ErabiltzaileZerbitzuak {
             String dorsalZenbakia = (String) modelo.getValueAt(i, 1);
 
             // Jokalaria model bat sortu eta listan gordetzen dugu
-            JokalariaModeloa jokalaria = new JokalariaModeloa();
+
             jokalaria.setErabiltzaileaIzena(erabiltzaileaIzena);
             jokalaria.setPertsonarenIzena(pertsonarenIzena);
             jokalaria.setAbizena(abizena);
@@ -160,6 +175,14 @@ public class ErabiltzaileZerbitzuak {
         int filas = modelo.getRowCount();
 
         for (int i = 0; i < filas; i++) {
+
+            AdmnistratzaileaModeloa administrtzailea = new AdmnistratzaileaModeloa();
+
+            if (modelo.getValueAt(i, 1) != null) {
+                Long id = (Long) modelo.getValueAt(i, 1);
+                administrtzailea.setIdErabiltzailea(id);
+            }
+
             String erabiltzaileaIzena = (String) modelo.getValueAt(i, 2);
             String pertsonarenIzena = (String) modelo.getValueAt(i, 3);
             String abizena = (String) modelo.getValueAt(i, 4);
@@ -168,7 +191,6 @@ public class ErabiltzaileZerbitzuak {
             String administratzaileKodea = (String) modelo.getValueAt(i, 0);
 
             // Crea una instancia de BazkideaModeloa con los valores de la fila actual
-            AdmnistratzaileaModeloa administrtzailea = new AdmnistratzaileaModeloa();
             administrtzailea.setErabiltzaileaIzena(erabiltzaileaIzena);
             administrtzailea.setPertsonarenIzena(pertsonarenIzena);
             administrtzailea.setAbizena(abizena);

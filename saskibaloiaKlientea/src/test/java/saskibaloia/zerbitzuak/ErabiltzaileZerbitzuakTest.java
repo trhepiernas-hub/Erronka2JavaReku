@@ -6,10 +6,7 @@ import saskibaloia.ikuspegia.Aplikazioa;
 import saskibaloia.modeloak.AdmnistratzaileaModeloa;
 import saskibaloia.modeloak.BazkideaModeloa;
 import saskibaloia.modeloak.JokalariaModeloa;
-import saskibaloia.modeloak.tablak.TablaModelCreator;
 
-import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 
 import java.util.List;
 
@@ -24,6 +21,9 @@ class ErabiltzaileZerbitzuakTest {
     private Aplikazioa aplikazioa = Aplikazioa.getInstace();
     @BeforeEach
     void setUp () {
+        aplikazioa.clearJokalariakTable();
+        aplikazioa.clearBazkideakTable();
+        aplikazioa.clearAdministrtzaileakTable();
 
         bazkidea = new BazkideaModeloa();
         bazkidea.setIdErabiltzailea(1L);
@@ -64,7 +64,7 @@ class ErabiltzaileZerbitzuakTest {
         List<BazkideaModeloa> a = erabiltzaileZerbitzuak.lortuBazkideTablakoDatuak();
         BazkideaModeloa bazkidea2 = (BazkideaModeloa) a.getLast();
         boolean result = true;
-        result = result && bazkidea2.getIdErabiltzailea() == null;
+        result = result && bazkidea.getIdErabiltzailea().equals(bazkidea2.getIdErabiltzailea());
         result = result && bazkidea.getErabiltzaileaIzena().equals(bazkidea2.getErabiltzaileaIzena());
         result = result && bazkidea.getPertsonarenIzena().equals(bazkidea2.getPertsonarenIzena());
         result = result && bazkidea.getAbizena().equals(bazkidea2.getAbizena());
@@ -82,7 +82,7 @@ class ErabiltzaileZerbitzuakTest {
         List<JokalariaModeloa> a = erabiltzaileZerbitzuak.lortuJokalariTablakoDatuak();
         JokalariaModeloa jokalaria2 = (JokalariaModeloa) a.getLast();
         boolean result = true;
-        result = result && jokalaria2.getIdErabiltzailea() == null;
+        result = result && jokalaria.getIdErabiltzailea().equals(jokalaria2.getIdErabiltzailea());
         result = result && jokalaria.getErabiltzaileaIzena().equals(jokalaria2.getErabiltzaileaIzena());
         result = result && jokalaria.getPertsonarenIzena().equals(jokalaria2.getPertsonarenIzena());
         result = result && jokalaria.getAbizena().equals(jokalaria2.getAbizena());
@@ -100,7 +100,7 @@ class ErabiltzaileZerbitzuakTest {
         List<AdmnistratzaileaModeloa> a = erabiltzaileZerbitzuak.lortuAdministrtzaileTablakoDatuak();
         AdmnistratzaileaModeloa administratzailea2 = (AdmnistratzaileaModeloa) a.getLast();
         boolean result = true;
-        result = result && administratzailea2.getIdErabiltzailea() == null;
+        result = result && administratzailea.getIdErabiltzailea().equals(administratzailea2.getIdErabiltzailea());
         result = result && administratzailea.getErabiltzaileaIzena().equals(administratzailea2.getErabiltzaileaIzena());
         result = result && administratzailea.getPertsonarenIzena().equals(administratzailea2.getPertsonarenIzena());
         result = result && administratzailea.getAbizena().equals(administratzailea2.getAbizena());
@@ -116,9 +116,9 @@ class ErabiltzaileZerbitzuakTest {
         ErabiltzaileZerbitzuak erabiltzaileZerbitzuak = new ErabiltzaileZerbitzuak();
         System.out.println(erabiltzaileZerbitzuak.sortuJson());
         String a = "{\n" +
-                "  \"jokalariak\": [{},{\"jokalariKodea\":\"01\",\"dorsalZenbakia\":\"12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"jokalariKodea\":\"01\",\"dorsalZenbakia\":\"12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
-                "  \"bazkideak\": [{},{\"kontuSortzeData\":\"2020-02-12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"kontuSortzeData\":\"2020-02-12\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
-                "  \"administratzaileak\": [{},{\"administratzaileKodea\":\"01\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"},{\"administratzaileKodea\":\"01\",\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}]\n" +
+                "  \"jokalariak\": [{\"jokalariKodea\":\"01\",\"dorsalZenbakia\":\"12\",\"idErabiltzailea\":1,\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
+                "  \"bazkideak\": [{\"kontuSortzeData\":\"2020-02-12\",\"idErabiltzailea\":1,\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}],\n" +
+                "  \"administratzaileak\": [{\"administratzaileKodea\":\"01\",\"idErabiltzailea\":1,\"erabiltzaileaIzena\":\"erabiltzaileaIzena\",\"pertsonarenIzena\":\"pertsonarenIzena\",\"abizena\":\"abizena\",\"pasahitza\":\"pasahitza\",\"korreoa\":\"korreoa\"}]\n" +
                 "}";
         assertEquals(a, erabiltzaileZerbitzuak.sortuJson());
 
