@@ -268,25 +268,31 @@ public class ErabiltzaileZerbitzuak {
         StringBuilder sql = new StringBuilder();
 
         for (JokalariaModeloa jokalaria : jokalariak) {
-            sql.append(insertErabiltzailea(jokalaria));
-            sql.append("INSERT INTO `jokalaria` (`dorsal_zenbakia`, `jokalari_kodea`, `id_erabiltzailea`) VALUES (");
-            sql.append(jokalaria.getDorsalZenbakia()).append(", ");
-            sql.append(jokalaria.getJokalariKodea()).append(", ");
-            sql.append("LAST_INSERT_ID()").append(");\n");
+            if (jokalaria.getErabiltzaileaIzena() != null) {
+                sql.append(insertErabiltzailea(jokalaria));
+                sql.append("INSERT INTO `jokalaria` (`dorsal_zenbakia`, `jokalari_kodea`, `id_erabiltzailea`) VALUES (");
+                sql.append(jokalaria.getDorsalZenbakia()).append(",\" ");
+                sql.append(jokalaria.getJokalariKodea()).append("\", \"");
+                sql.append("LAST_INSERT_ID()").append("\");\n");
+            }
         }
 
         for (BazkideaModeloa bazkidea : bazkideak) {
-            sql.append(insertErabiltzailea(bazkidea));
-            sql.append("INSERT INTO `bazkidea` (`kontu_sortze_data`, `id_erabiltzailea`) VALUES (");
-            sql.append(bazkidea.getkontuSortzeData()).append(", ");
-            sql.append("LAST_INSERT_ID()").append(");\n");
+            if (bazkidea.getErabiltzaileaIzena() != null) {
+                sql.append(insertErabiltzailea(bazkidea));
+                sql.append("INSERT INTO `bazkidea` (`kontu_sortze_data`, `id_erabiltzailea`) VALUES (");
+                sql.append(bazkidea.getkontuSortzeData()).append(",\" ");
+                sql.append("LAST_INSERT_ID()").append("\");\n");
+            }
         }
 
         for (AdmnistratzaileaModeloa administratzailea : administratzaileak) {
-            sql.append(insertErabiltzailea(administratzailea));
-            sql.append("INSERT INTO `administratzailea` (`administratzaile_kodea`, `id_erabiltzailea`) VALUES (");
-            sql.append(administratzailea.getAdministratzaileKodea()).append(", ");
-            sql.append("LAST_INSERT_ID()").append(");\n");
+            if (administratzailea.getErabiltzaileaIzena() != null) {
+                sql.append(insertErabiltzailea(administratzailea));
+                sql.append("INSERT INTO `administratzailea` (`administratzaile_kodea`, `id_erabiltzailea`) VALUES (");
+                sql.append(administratzailea.getAdministratzaileKodea()).append(",\" ");
+                sql.append("LAST_INSERT_ID()").append("\");\n");
+            }
         }
 
         final String sqlKodea = sql.toString();
@@ -310,12 +316,12 @@ public class ErabiltzaileZerbitzuak {
         sql.append("INSERT INTO `erabiltzailea` (`id_erabiltzailea`," +
                 "`abizena`, `erabiltzailea_izena`, `korreoa`, `pasahitza`," +" " +
                 "`pertsonaren_izena`) VALUES (");
-        sql.append(erabiltzaileaModeloa.getIdErabiltzailea()).append(", ");
-        sql.append(erabiltzaileaModeloa.getAbizena()).append(", ");
-        sql.append(erabiltzaileaModeloa.getErabiltzaileaIzena()).append(", ");
-        sql.append(erabiltzaileaModeloa.getKorreoa()).append(", ");
-        sql.append(erabiltzaileaModeloa.getPasahitza()).append(", ");
-        sql.append(erabiltzaileaModeloa.getPertsonarenIzena()).append(");\n");
+        sql.append(erabiltzaileaModeloa.getIdErabiltzailea()).append(",\" ");
+        sql.append(erabiltzaileaModeloa.getAbizena()).append("\",\" ");
+        sql.append(erabiltzaileaModeloa.getErabiltzaileaIzena()).append("\",\" ");
+        sql.append(erabiltzaileaModeloa.getKorreoa()).append("\",\" ");
+        sql.append(erabiltzaileaModeloa.getPasahitza()).append("\",\" ");
+        sql.append(erabiltzaileaModeloa.getPertsonarenIzena()).append("\");\n");
         return sql.toString();
     }
 }
